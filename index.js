@@ -30,6 +30,23 @@ bot.onText(/\/help(?:@[\w_]+)?/, msg => {
     bot.sendMessage(msg.chat.id, `📥 Just send a social media link and I’ll try to grab the content.\n🧹 Your original message will be deleted if I have permission.`);
 });
 
+bot.onText(/\/about(?:@[\w_]+)?/, msg => {
+    const aboutText = `👋 *About this Bot*  
+This bot automatically fetches media (videos, images, audio) from popular social media links you send and delivers them directly in chat. It also deletes your original message for a cleaner chat (if it has permission).  
+
+📂 Works with: Instagram, Twitter/X, YouTube, TikTok, Reddit, Pinterest, Facebook, SoundCloud, and more.  
+🔒 All media is logged privately for monitoring only.
+
+—
+
+👨‍💻 *Author*: [@Sk_dev](https://t.me/Sk_dev)  
+💻 *GitHub*: [SajagIN](https://github.com/SajagIN)  
+📦 *Bot Repo*: [unlink-media-bot](https://github.com/SajagIN/unlink-media-bot)  
+💬 *Slack*: [@SK](https://hackclub.slack.com/team/U08PGAD2KC1)`;
+
+    bot.sendMessage(msg.chat.id, aboutText, { parse_mode: 'Markdown' });
+});
+
 bot.on('message', async msg => {
     const id = msg.chat.id;
     const txt = msg.text;
