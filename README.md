@@ -64,7 +64,7 @@ Create a `.env` file:
 
 ```env
 TELEGRAM_BOT_TOKEN=your_bot_token_here
-TG_LOG_USER_ID=123456789
+TG_LOG_USER_ID=your_log_user_tg_user_id_here
 ZM_IO_VN_API_KEY=your_zm_api_key_here
 ```
 
